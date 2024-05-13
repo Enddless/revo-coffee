@@ -1,0 +1,95 @@
+/* LEAD STYLES */
+.lead{
+  display: grid;
+  grid-template-columns: 30% 45% 25%;
+  position: relative;
+  height:768px;
+
+
+
+  &__info {
+    grid-column: 1;
+    padding:44px 0 0 130px;
+    position: relative;
+
+      
+    @include desktop {
+      padding:44px 0 0 80px;
+    }
+    @include tablet {
+      padding:44px 0 0 60px;
+    }
+    @include mobile {
+      padding:44px 0 0 30px;
+    }
+
+    &-logo {
+      position: relative;
+      left:-20px;
+    }
+    &-title {
+      font-family: var(--font-family-secondary);
+      margin-bottom: 64px;
+      position: absolute;
+      bottom:0;
+      z-index:10;
+
+      & h1{
+        font-size:54px;
+        line-height: 70px;
+        text-transform: uppercase;
+      }
+
+      
+      & .selected__title {
+        background-color: var(--color-accent);
+        color:var(--color-light);
+        position: relative;
+        z-index:1;
+      }
+    }
+  }
+
+  &__photo  {
+    background: url(../assets/images/main_photo.jpg) no-repeat;
+    position: relative;
+    z-index:-1;
+  }
+
+  & .column__background {
+    position: absolute;
+    right:0;
+    width: 25%;
+  }
+
+  &__menu {
+    grid-column: 3;
+    color: var(--color-light-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap:30px;
+    }
+
+    &-item {
+      cursor: pointer;
+
+      @include hover {
+        color: var(--color-accent);
+        transition: all var(--transition-duration) ease;
+      }
+    }
+
+    &-basket {
+      position: absolute;
+      top:74px;
+    }
+  }
+
+}

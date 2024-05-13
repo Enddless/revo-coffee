@@ -1,0 +1,50 @@
+/* BUILD STYLES */
+.build  {
+  margin:87px 0 128px;
+
+  &__description {
+    text-align: center;
+  }
+
+  &__list {
+    margin-top:90px;
+
+    @include desktop {
+      margin:90px;
+    }
+    @include tablet {
+      margin:60px;
+      gap: 20px;
+    }
+    @include mobile {
+      margin:30px;
+    }
+  }
+
+  &__item {
+    grid-column: span 3;
+    text-align: center;
+    padding:0 5px;
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    // @include mobile {
+    //   grid-column: span 12;
+    // }
+
+    &-icon {
+      margin-bottom:40px;
+    }
+    &-name {
+      font-size:24px;
+      line-height: 28px;
+      font-weight:600;
+    }
+    &-text {
+      margin-top:12px;
+      font-size:16px;
+    }
+  }
+}

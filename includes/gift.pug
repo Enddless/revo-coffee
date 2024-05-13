@@ -1,0 +1,51 @@
+- 
+  var productsData = [    
+    {
+      image:"../assets/images/coffee-product.png",
+      imageClass: "gift__card-image",
+      alt: "coffee-product",
+      price: "285.000",
+      name: "Cà phê phin Việt Nam",
+      text: "Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn",
+      classProduct:"gift__item",
+      classInfo: "gift__item-info",
+      icons: [
+        {
+          imageIcon: "../assets/images/Corn.svg",
+          altIcon: "corn",
+          textIcon: ["Loại hạt", "Fine Robusta Blend"]
+        },
+        {
+          imageIcon: "../assets/images/Mountain.svg",
+          altIcon: "Mountain",
+          textIcon: ["Độ cao", "700 - 800m"]
+        }
+      ]
+    },
+  ];
+-
+  var titleData = [
+    {
+      subtitle: "Best Gift For Best Friend",
+      title: "GIFTSET",
+      class:"gift__description"
+    }
+  ];  
+-
+  var tabsCount = 0;
+section.gift
+  include title.pug
+  each item in titleData
+    +titleCard(item)
+  .column__background
+  .container.gift__list 
+    include products.pug
+    each product in productsData
+      +productCard(product)
+    .gift__tabs
+      .gift__tabs-cell.gift__tabs-cell-active
+        p 1
+      .gift__tabs-cell
+        p 2
+      .gift__tabs-cell
+        p 3

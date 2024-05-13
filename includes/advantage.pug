@@ -1,0 +1,5 @@
+mixin advantageCard(product)
+  .build__item 
+    img(src=product.image, alt=product.alt).build__item-icon
+    p.build__item-name=product.name
+    p.build__item-text=product.text

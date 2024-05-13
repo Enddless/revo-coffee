@@ -1,0 +1,43 @@
+- 
+  var advantageData = [    
+    {
+      image:"../assets/images/advantage1.png",
+      alt: "advantage1",
+      name: "Nguồn gốc",
+      text: "Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế"
+    },
+    {
+      image:"../assets/images/advantage2.png",
+      alt: "advantage2",
+      name: "Chất lượng",
+      text: "Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê"
+    },
+    {
+      image:"../assets/images/advantage3.png",
+      alt: "advantage3",
+      name: "Các loại hạt",
+      text: "70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean"
+    },
+    {
+      image:"../assets/images/advantage4.png",
+      alt: "advantage4",
+      name: "Pha chế",
+      text: "Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt"
+    }
+  ]
+-
+  var titleData = [
+    {
+      subtitle: "Your Personalized Coffee",
+      title: "Coffee build your base",
+      class:"build__description"
+    }
+  ]
+section.build#build 
+  include title.pug
+  each item in titleData
+    +titleCard(item)
+  .container.build__list
+    include advantage.pug
+    each product in advantageData
+      +advantageCard(product)

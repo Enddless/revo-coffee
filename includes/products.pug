@@ -1,0 +1,21 @@
+mixin productCard(product)
+  .product__item(class=product.classProduct)
+    if product.imageClass
+      img(src=product.image, alt=product.alt, class=product.imageClass)
+    else
+     .product__item-photo 
+      img(src=product.image, alt=product.alt)
+    .product__item-info(class=product.classInfo) 
+      p.product__price=product.price
+      p.product__name=product.name
+      p.product__text=product.text
+      if product.icons
+        .icons 
+          each itemIcon in product.icons 
+            .icons__item 
+              img(src=itemIcon.imageIcon, alt=itemIcon.altIcon)
+            .icons__description 
+              each descrItem in itemIcon.textIcon 
+                p.text=descrItem         
+      button(type="button").product__button.common__button.common__button-active MUA NGAY
+      button(type="button").product__button.common__button CHI TIẾT

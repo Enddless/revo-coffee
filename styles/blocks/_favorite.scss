@@ -1,0 +1,40 @@
+/* FAVORITE */
+.favorite {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  position: relative;
+  padding-bottom:127px;
+
+  & .container{
+    grid-column: span 3;
+  }
+
+  & .column__background {
+    position: absolute;
+    z-index:-1;
+  }
+
+  &__list {
+    margin-top: 72px;
+    row-gap: 30px;
+
+    @include desktop {
+      margin:90px;
+    }
+    @include tablet {
+      margin:60px;
+      gap: 20px;
+    }
+    @include mobile {
+      margin:30px;
+    }
+  }
+
+  &__description {
+    padding-top:90px;
+  }
+
+  &__item {
+    box-shadow: 0 4px 24px 0 rgba(var(--color-shadow), 0.5);
+  }
+}

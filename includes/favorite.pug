@@ -1,0 +1,53 @@
+- 
+  var productsData = [    
+    {
+      image:"../assets/images/coffee1.png",
+      alt: "coffee1",
+      price: "99.000",
+      name: "REVO Morning",
+      text: "đắng, hậu ngọt, hương hoa ",
+      classProduct: "favorite__item"
+    },
+    {
+      image:"../assets/images/coffee2.png",
+      alt: "coffee2",
+      price: "85.000",
+      name: "REVO Everyday",
+      text: "cân bằng, hậu đắng, vị chocolate ",
+      classProduct: "favorite__item"
+    },
+    {
+      image:"../assets/images/coffee3.png",
+      alt: "coffee3",
+      price: "139.000",
+      name: "REVO Origin",
+      text: "hậu ngọt, ít đắng, vị chua dâu",
+      classProduct: "favorite__item"
+    },
+    {
+      image:"../assets/images/coffee4.png",
+      alt: "coffee4",
+      price: "73.000",
+      name: "REVO Đậm Đà",
+      text: "đậm đà, đắng, truyền thống",
+      classProduct: "favorite__item"
+    }
+  ]
+-
+  var titleData = [
+    {
+      subtitle: "Choose Your Favorite",
+      title: "CHUẨN GU ĐÚNG VỊ",
+      class:"favorite__description"
+    }
+  ]
+
+section.favorite 
+  include title.pug
+  each item in titleData
+    +titleCard(item)
+  .column__background
+  .container.favorite__list 
+    include products.pug
+    each product in productsData
+      +productCard(product)
